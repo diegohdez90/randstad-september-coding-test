@@ -6,4 +6,4 @@
 
  - The browser automatically opens the web application in the port 5500.
 
-- To check test cases, update  `index.js` file. In the lines 86 to 92 uncomment one `drawContainer` call. Save the file and automatically the browser updates.
+- To check test cases, update  `index.js` file. In the lines 86 to 93 uncomment one `drawContainer` call. Save the file and automatically the browser updates.

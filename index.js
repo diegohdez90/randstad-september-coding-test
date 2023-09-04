@@ -51,7 +51,7 @@ const drawContainer = (containerSize, childSize, numberOfChildren) => {
       fitWidth = true;
     }
     
-    if (fitWidth && accHeight + childSize === containerSize && !fitHeight) {
+    if ((fitWidth && accWidth === containerSize) && accHeight + childSize === containerSize && !fitHeight) {
       fitHeight = true;
     }
 
@@ -83,13 +83,14 @@ const drawContainer = (containerSize, childSize, numberOfChildren) => {
   document.querySelector('#message').textContent = msg
 };
 
-drawContainer(200, 50, 17);
-//drawContainer(310, 200, 4);
-//drawContainer(413, 42, 30);
-//drawContainer(200, 300, 2);
+drawContainer(200, 50, 17);     // Fit container
+//drawContainer(310, 200, 4);   // Do not fit
+//drawContainer(413, 42, 30);   // Do not fit
+//drawContainer(200, 300, 2);   // Do not fit
 /* My test cases */
-//drawContainer(100, 10, 100);
-//drawContainer(100, 20, 50);
+//drawContainer(100, 10, 100);  // Fit container
+//drawContainer(100, 20, 25);   // Fit container
+//drawContainer(100, 20, 24);   // Do not fit container
 
 
 
