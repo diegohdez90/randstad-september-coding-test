@@ -73,7 +73,7 @@ const drawContainer = (containerSize, childSize, numberOfChildren) => {
     totalSquares = squares
   }
   if (!overlapped && (accWidth < containerSize || accHeight < containerSize )) {
-    msg = 'The squares don\'t fit the container ' + totalSquares + ' squares'
+    msg = 'The squares don\'t fit the container with ' + numberOfChildren + ' squares'
   } else if (fitWidth && fitHeight ) {
     msg = 'Square fit '
   } else {
@@ -83,14 +83,14 @@ const drawContainer = (containerSize, childSize, numberOfChildren) => {
   document.querySelector('#message').textContent = msg
 };
 
-drawContainer(200, 50, 17);     // Fit container
+//drawContainer(200, 50, 17);     // Fit container
 //drawContainer(310, 200, 4);   // Do not fit
 //drawContainer(413, 42, 30);   // Do not fit
 //drawContainer(200, 300, 2);   // Do not fit
 /* My test cases */
 //drawContainer(100, 10, 100);  // Fit container
 //drawContainer(100, 20, 25);   // Fit container
-//drawContainer(100, 20, 24);   // Do not fit container
+drawContainer(100, 20, 24);   // Do not fit container
 
 
 
